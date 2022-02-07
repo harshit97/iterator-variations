@@ -5,13 +5,13 @@ import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.stream.Collectors;
 
-public class InterleaveIterator<E> implements Iterator<E> {
+public class InterleaveIteratorUsingCounter<E> implements Iterator<E> {
 
     private final List<Iterator<E>> iteratorList;
     private Iterator<E> currentIterator;
     private int iteratorIndex;
 
-    InterleaveIterator(List<Iterator<E>> iteratorList) {
+    InterleaveIteratorUsingCounter(List<Iterator<E>> iteratorList) {
         this.iteratorList = iteratorList.stream().filter(Iterator::hasNext).collect(Collectors.toList());
         iteratorIndex = 0;
         currentIterator = this.iteratorList.get(iteratorIndex);

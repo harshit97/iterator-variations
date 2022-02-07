@@ -17,9 +17,9 @@ public class Main {
         iteratorList.add(bList.iterator());
         iteratorList.add(cList.iterator());
 
-        InterleaveIterator<String> interleaveIterator = new InterleaveIterator(iteratorList);
-        while (interleaveIterator.hasNext()) {
-            System.out.print(interleaveIterator.next() + ", ");
+        InterleaveIteratorUsingCounter<String> interleaveIteratorUsingCounter = new InterleaveIteratorUsingCounter(iteratorList);
+        while (interleaveIteratorUsingCounter.hasNext()) {
+            System.out.print(interleaveIteratorUsingCounter.next() + ", ");
         }
     }
 }
